@@ -6,7 +6,7 @@ A modern and responsive **Smart Bill Split Calculator** built using **HTML, CSS,
 
 ## 🚀 Live Demo
 
-https://your-username.github.io/Smart-Bill-Split-Calculator/
+ https://cse23r01a05cq.github.io/Smart-Bill-Split-Calculator/
 
 
 ## ✨ Features
