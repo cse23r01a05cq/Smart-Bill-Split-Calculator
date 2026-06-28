@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Bill Split Calculator</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- Theme Toggle -->
+        <div class="theme-container">
+            <button id="theme-btn">
+                <i class="fa-solid fa-moon"></i>
+            </button>
+        </div>
+
+        <!-- Calculator Card -->
+        <div class="card">
+
+            <h1>
+                <i class="fa-solid fa-money-bill-wave"></i>
+                Smart Bill Split Calculator
+            </h1>
+
+            <!-- Currency -->
+            <div class="input-group">
+
+                <label>
+                    <i class="fa-solid fa-coins"></i>
+                    Currency
+                </label>
+
+                <select id="currency">
+                    <option value="₹">₹ INR</option>
+                    <option value="$">$ USD</option>
+                    <option value="€">€ EUR</option>
+                    <option value="£">£ GBP</option>
+                </select>
+
+            </div>
+
+            <!-- Bill -->
+
+            <div class="input-group">
+
+                <label>
+                    <i class="fa-solid fa-wallet"></i>
+                    Bill Amount
+                </label>
+
+                <input
+                    type="number"
+                    id="bill"
+                    placeholder="Enter bill amount">
+
+            </div>
+
+            <!-- Tip -->
+
+            <div class="input-group">
+
+                <label>
+                    <i class="fa-solid fa-percent"></i>
+                    Tip Percentage
+                </label>
+
+                <input
+                    type="number"
+                    id="tip"
+                    placeholder="Custom Tip (%)">
+
+            </div>
+
+            <!-- Tip Buttons -->
+
+            <div class="tip-buttons">
+
+                <button class="tip-btn" data-tip="5">5%</button>
+
+                <button class="tip-btn" data-tip="10">10%</button>
+
+                <button class="tip-btn" data-tip="15">15%</button>
+
+                <button class="tip-btn" data-tip="20">20%</button>
+
+                <button class="tip-btn" data-tip="25">25%</button>
+
+            </div>
+
+            <!-- Persons -->
+
+            <div class="input-group">
+
+                <label>
+                    <i class="fa-solid fa-users"></i>
+                    Number of Persons
+                </label>
+
+                <input
+                    type="number"
+                    id="persons"
+                    placeholder="Enter number of persons">
+
+            </div>
+
+            <!-- Error -->
+
+            <p id="error"></p>
+
+            <!-- Buttons -->
+
+            <div class="buttons">
+
+                <button id="calculate-btn">
+                    <i class="fa-solid fa-calculator"></i>
+                    Calculate
+                </button>
+
+                <button id="reset-btn">
+                    <i class="fa-solid fa-rotate-right"></i>
+                    Reset
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- Result Card -->
+
+        <div class="result-card">
+
+            <h2>
+                <i class="fa-solid fa-chart-column"></i>
+                Bill Summary
+            </h2>
+
+            <div class="summary">
+
+                <div class="row">
+                    <span>Bill Amount</span>
+                    <span id="billAmount">₹0.00</span>
+                </div>
+
+                <div class="row">
+                    <span>Tip Amount</span>
+                    <span id="tipAmount">₹0.00</span>
+                </div>
+
+                <div class="row">
+                    <span>Total Amount</span>
+                    <span id="totalAmount">₹0.00</span>
+                </div>
+
+                <div class="row highlight">
+                    <span>Each Person Pays</span>
+                    <span id="perPerson">₹0.00</span>
+                </div>
+
+            </div>
+
+            <button id="download-btn">
+                <i class="fa-solid fa-download"></i>
+                Download Receipt
+            </button>
+
+        </div>
+
+        <!-- History -->
+
+        <div class="history-card">
+
+            <div class="history-header">
+
+                <h2>
+                    <i class="fa-solid fa-clock-rotate-left"></i>
+                    Bill History
+                </h2>
+
+                <button id="clear-history">
+                    Clear History
+                </button>
+
+            </div>
+
+            <div id="history-list">
+
+                <p class="empty">
+                    No history available.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+
